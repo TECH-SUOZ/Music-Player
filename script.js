@@ -16,7 +16,7 @@ const songs = [
     {
         path: 'music/years.mp3',
         displayName: '7 years',
-        cover: 'images/years.jpg',
+        cover: 'Images/years.jpg',
         artist: 'LUKAS GRAHAM',
     },
     {
