@@ -1,15 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Angkor&display=swap');
+
 body {
-        font-family: "Angkor", serif;
-        font-weight: 500;
-        font-style: normal;
-        font-size: 12px;
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-.background{
+    font-family: "Angkor", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 12px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.background {
     position: fixed;
     width: 200%;
     height: 200%;
@@ -17,7 +19,8 @@ body {
     left: -50%;
     z-index: -1;
 }
-.background img{
+
+.background img {
     position: absolute;
     margin: auto;
     top: 0;
@@ -32,7 +35,7 @@ body {
 
 }
 
-.container{
+.container {
     background-color: #e7e7e7;
     height: 500px;
     width: 400px;
@@ -41,11 +44,11 @@ body {
     transition: all 0.5s ease;
 }
 
-.container:hover{
+.container:hover {
     box-shadow: 0 15px 30px rgb(0, 0, 0);
 }
 
-.player-img{
+.player-img {
     width: 300px;
     height: 300px;
     position: relative;
@@ -53,7 +56,7 @@ body {
     left: 50px;
 }
 
-.player-img img{
+.player-img img {
     object-fit: auto;
     border-radius: 20px;
     height: 0;
@@ -62,29 +65,32 @@ body {
     box-shadow: 0 5px 30px 5px rgba(0, 0, 0, 0.5);
 }
 
-.player-img:hover img{
+.player-img:hover img {
     box-shadow: 0 5px 30px 5px rgba(0, 0, 0, 0.5);
 }
 
-.player-img img.active{
+.player-img img.active {
     width: 100%;
     height: 100%;
     transition: all 0.5s;
     opacity: 1;
 }
-h2{
+
+h2 {
     font-size: 25px;
     text-align: center;
     font-weight: 500;
     margin: 5px 0 0;
 }
-h3{
+
+h3 {
     font-size: 20px;
     text-align: center;
     font-weight: 300;
     margin: 5px 0 0;
 }
-.player-progress{
+
+.player-progress {
     background-color: #fff;
     border-radius: 5px;
     cursor: pointer;
@@ -93,7 +99,7 @@ h3{
     width: 90%;
 }
 
-.progress{
+.progress {
     background-color: #0f0f0f;
     border-radius: 5px;
     height: 100%;
@@ -101,21 +107,21 @@ h3{
     transition: width 0.1s linear;
 }
 
-.music-duration{
+.music-duration {
     position: relative;
     top: -25px;
     display: flex;
     justify-content: space-between;
 }
 
-.player-controls{
+.player-controls {
     position: relative;
     top: -15px;
     left: 120px;
     width: 200px;
 }
 
-.fa-solid{
+.fa-solid {
     font-size: 30px;
     color: #191920;
     margin-right: 30px;
@@ -123,13 +129,31 @@ h3{
     user-select: none;
     transition: 0.3s ease;
 }
-.fa-solid:hover{
+
+.fa-solid:hover {
     filter: brightness(30%);
     color: rgba(0, 0, 0, 0.87);
 }
 
-.play-button{
+.play-button {
     font-size: 44px;
     position: relative;
     top: 3px;
+}
+
+@media (max-width: 500px) {
+    .player-img {
+        width: 300px;
+        height: 300px;
+        position: relative;
+        top: -50px;
+        left: 70px;
+    }
+    
+    .player-img img.active {
+        width: 90%;
+        height: 100%;
+        transition: all 0.5s;
+        opacity: 1;
+    }
 }
